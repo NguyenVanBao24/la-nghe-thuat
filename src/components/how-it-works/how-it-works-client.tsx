@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Container, Section } from "@/components/ui";
 import { Heading, Text, LabelText } from "@/components/ui";
 import { Button } from "@/components/ui";

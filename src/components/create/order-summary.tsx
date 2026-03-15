@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Button, Card, Badge } from "@/components/ui";
+import { Button, Card } from "@/components/ui";
 import { Text, LabelText, Heading } from "@/components/ui";
 import { formatPrice } from "@/lib/utils";
 import { Minus, Plus, AlertCircle } from "lucide-react";

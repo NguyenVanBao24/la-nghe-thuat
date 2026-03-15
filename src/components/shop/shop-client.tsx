@@ -5,7 +5,7 @@ import { Container, Section } from "@/components/ui";
 import { Heading, Text, LabelText } from "@/components/ui";
 import { ProductGrid }  from "./product-grid";
 import { ShopFilter }   from "./shop-filter";
-import { type Product, type ProductStatus } from "@/types";
+import { type Product } from "@/types";
 import { type LeafType } from "@/types";
 
 // Data tạm — sau lấy từ Supabase

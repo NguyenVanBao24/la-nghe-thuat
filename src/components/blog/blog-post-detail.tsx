@@ -35,7 +35,7 @@ interface BlogPostDetailProps {
     slug: string;
 }
 
-export function BlogPostDetail({ slug: _ }: BlogPostDetailProps) {
+export function BlogPostDetail({  }: BlogPostDetailProps) {
     const post = mockPost; // TODO: fetch theo slug từ MDX
 
     return (

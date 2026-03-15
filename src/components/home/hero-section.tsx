@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Button } from "@/components/ui";
 import { Display, Text, LabelText } from "@/components/ui";
 import { Container } from "@/components/ui";

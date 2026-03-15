@@ -2,7 +2,6 @@
 
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
-import Link from "next/link";
 import { Container } from "@/components/ui";
 import { Heading, Text, LabelText } from "@/components/ui";
 import { Button } from "@/components/ui";
@@ -93,7 +92,6 @@ function OrderConfirmedContent() {
                             <ArrowRight size={16} />
                         </Button>
                     </div>
-
                 </div>
             </Container>
         </div>
