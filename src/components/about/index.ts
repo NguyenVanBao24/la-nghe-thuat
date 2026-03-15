@@ -1,0 +1,1 @@
+export { AboutClient } from "./about-client";
