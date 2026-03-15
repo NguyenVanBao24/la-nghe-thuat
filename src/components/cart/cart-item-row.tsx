@@ -6,6 +6,7 @@ import { formatPrice } from "@/lib/utils";
 import { useCartStore } from "@/store/cart-store";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import { type CartItem, type LeafType } from "@/types";
+import Image from "next/image"
 
 const leafEmojis: Record<LeafType, string> = {
     bodhi: "🍃",
@@ -39,7 +40,7 @@ export function CartItemRow({ item }: CartItemRowProps) {
                 {/* Thumbnail */}
                 <div className="w-20 h-20 rounded-lg bg-gradient-to-br from-warm/50 to-primary-light/30 border border-border flex items-center justify-center flex-shrink-0">
                     {item.previewImageUrl ? (
-                        <img
+                        <Image
                             src={item.previewImageUrl}
                             alt={item.leafName}
                             className="w-full h-full object-cover rounded-lg"

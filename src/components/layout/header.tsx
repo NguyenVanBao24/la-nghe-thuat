@@ -8,6 +8,8 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui";
 import { Container } from "@/components/ui";
 import { useCartStore } from "@/store/cart-store";
+import { useAuthStore } from "@/store/auth-store";
+import { User } from "lucide-react";
 
 const navLinks = [
     { href: "/gallery",       label: "Gallery"        },
@@ -84,6 +86,7 @@ export function Header() {
                     {/* Actions desktop */}
                     <div className="hidden md:flex items-center gap-3">
                         <CartButton />
+                        <AuthButton />
                         <Button href="/create" size="sm">
                             Tạo Tranh Ngay
                         </Button>
@@ -151,6 +154,34 @@ function CartButton() {
           {cartCount}
         </span>
             )}
+        </Link>
+    );
+}
+
+// Thay phần Actions desktop bằng:
+function AuthButton() {
+    const { user } = useAuthStore();
+
+    if (user) {
+        return (
+            <Link
+                href="/account"
+                className="flex items-center gap-2 px-3 py-2 rounded-sm text-sm font-medium text-text-secondary hover:text-text-primary hover:bg-surface transition-colors"
+            >
+                <User size={16} />
+                <span className="hidden lg:inline">
+          {user.user_metadata?.full_name?.split(" ").pop() ?? "Tài khoản"}
+        </span>
+            </Link>
+        );
+    }
+
+    return (
+        <Link
+            href="/login"
+            className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+        >
+            Đăng nhập
         </Link>
     );
 }
