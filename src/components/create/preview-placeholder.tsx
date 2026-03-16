@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { Text } from "@/components/ui";
 import { ImageIcon } from "lucide-react";
 import { type LeafType, type LeafSize } from "@/types";
+import Image from "next/image";
 
 const leafEmojis: Record<LeafType, string> = {
     bodhi: "🍃",
@@ -49,7 +50,7 @@ export function PreviewPlaceholder({
                             <span className="text-[140px] opacity-20">{leafEmojis[leafType]}</span>
                         </div>
                         {/* Ảnh người dùng đè lên */}
-                        <img
+                        <Image
                             src={uploadedImage}
                             alt="Preview"
                             className="absolute inset-4 w-[calc(100%-2rem)] h-[calc(100%-2rem)] object-cover rounded-lg opacity-80 mix-blend-multiply"

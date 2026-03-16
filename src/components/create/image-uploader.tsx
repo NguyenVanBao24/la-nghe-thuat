@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { cn } from "@/lib/utils";
 import { Text, LabelText } from "@/components/ui";
 import { Upload, X, ImageIcon } from "lucide-react";
+import Image from "next/image";
 
 interface ImageUploaderProps {
     uploadedImage: string | null;
@@ -46,7 +47,7 @@ export function ImageUploader({ uploadedImage, onChange }: ImageUploaderProps) {
             {uploadedImage ? (
                 // Đã có ảnh
                 <div className="relative rounded-md overflow-hidden aspect-square">
-                    <img
+                    <Image
                         src={uploadedImage}
                         alt="Ảnh đã tải lên"
                         className="w-full h-full object-cover"
