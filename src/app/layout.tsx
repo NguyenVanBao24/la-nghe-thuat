@@ -6,6 +6,20 @@ import { localBusinessJsonLd } from "@/lib/jsonld";
 import "@/app/globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import {AuthProvider} from "@/components/shared/auth-provider";
+import { Cormorant_Garamond, Inter } from "next/font/google";
+const cormorant = Cormorant_Garamond({
+    subsets:  ["latin"],
+    weight:   ["300", "400", "500", "600"],
+    style:    ["normal", "italic"],
+    variable: "--font-serif",
+    display:  "swap",
+});
+
+const inter = Inter({
+    subsets:  ["latin"],
+    variable: "--font-sans",
+    display:  "swap",
+});
 
 const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://leafora.vn";
 
@@ -44,7 +58,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="vi">
+        <html lang="vi" className={`${cormorant.variable} ${inter.variable}`}>
         <body className="min-h-screen flex flex-col bg-background text-text-primary">
             <JsonLd data={localBusinessJsonLd()} />
             <GoogleAnalytics gaId="G-XXXXXXXXXX" />
