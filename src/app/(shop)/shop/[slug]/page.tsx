@@ -6,7 +6,6 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    // TODO: fetch product từ Supabase theo slug
     return {
         title: `Tranh lá — ${params.slug}`,
         description: "Chi tiết tác phẩm tranh lá tự nhiên handmade.",
